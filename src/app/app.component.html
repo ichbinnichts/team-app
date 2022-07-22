@@ -1,13 +1,10 @@
 <div class="container">
   <div><h1>Team Generator</h1></div>
   <div>
-    <ul class="list">
-      <li>test</li>
-      <li>test1</li>
-    </ul>
+    <ul class="list"></ul>
     <div class="add-members-container">
-      <input type="text" placeholder="Name"/>
-      <button>Add</button>
+      <input #addId type="text" placeholder="Name" (input)="addInput(addId.value)"/>
+      <button (click)="addMember()">Add</button>
     </div>
     <div class="input-container">
       <input type="text" placeholder="# of teams"/>
