@@ -10,6 +10,7 @@ export class AppComponent {
   members : string[] = [];
   addMember(){
     this.members.push(this.newMemberName);
+    console.log(this.members);
   }
   addInput(member: string){
     this.newMemberName = member;
