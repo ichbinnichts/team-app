@@ -6,11 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  newMemberName: string = "";
+  newMemberName: string = '';
   members : string[] = [];
+  errorMessage = ''; 
   addMember(){
+    if(!this.newMemberName){
+      this.errorMessage = 'Name cant be empty';
+      return;
+    }
+    this.errorMessage = '';
     this.members.push(this.newMemberName);
-    console.log(this.members);
+    this.newMemberName = '';
   }
   addInput(member: string){
     this.newMemberName = member;
